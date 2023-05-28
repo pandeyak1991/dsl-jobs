@@ -9,8 +9,9 @@ stages{
   }
  stage("docker-command"){
     steps{
+      retry(3){
      sh "docker --version"
-    }
+      }}
   }  
 
 }
