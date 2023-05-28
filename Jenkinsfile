@@ -1,6 +1,6 @@
 pipeline {
   agent any
-}
+
 stages{
   stage("echo"){
     steps{
@@ -8,4 +8,5 @@ stages{
     }
   }
 
+}
 }
