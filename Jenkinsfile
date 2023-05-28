@@ -7,6 +7,11 @@ stages{
      echo "Hello world"
     }
   }
+ stage("docker-command"){
+    steps{
+     sh "docker --version"
+    }
+  }  
 
 }
 }
