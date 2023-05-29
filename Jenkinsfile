@@ -2,28 +2,28 @@ pipeline {
   agent any
 
 stages{
-  stage("echo"){
-    steps{
-     echo "Hello world"
-    }
-  }
-//   commenting below steps as jenkins is installed inside of container
-//  stage("docker-command"){
+//   stage("echo"){
 //     steps{
-//       retry(3){
-//      sh "docker --version"
-//       }}
-//   }  
+//      echo "Hello world"
+//     }
+//   }
+// //   commenting below steps as jenkins is installed inside of container
+// //  stage("docker-command"){
+// //     steps{
+// //       retry(3){
+// //      sh "docker --version"
+// //       }}
+// //   }  
   
-    stage("build number"){
-    steps{
-      echo "${env.BUILD_NUMBER}"
-    }
-  }
+//     stage("build number"){
+//     steps{
+//       echo "${env.BUILD_NUMBER}"
+//     }
+//   }
   
   
     parallel{
-      stages{
+  
       stage("git clone repo 1"){
       steps{
         echo "clone git repo 1" 
@@ -32,7 +32,7 @@ stages{
         steps{
         echo "cloning repo 2"
         }}
-      }
+      
   }
 
 }
