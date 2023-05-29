@@ -1,6 +1,7 @@
 pipeline {
   agent any
 
+  options{timestamps()}   // will add timestemps for each stage and steps 
 stages{
   stage("echo"){
     steps{
