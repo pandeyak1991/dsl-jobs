@@ -20,6 +20,19 @@ stages{
       echo "${env.BUILD_NUMBER}"
     }
   }
+  
+  stages("parellel"){
+    parallel{
+      stage("git clone repo 1")
+      steps{
+        echo "clone git repo 1" 
+      }
+      stage("cloning repo 2"){
+        steps{
+        echo "cloning repo 2"
+        }}
+    }
+  }
 
 }
 }
