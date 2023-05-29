@@ -14,6 +14,12 @@ stages{
 //      sh "docker --version"
 //       }}
 //   }  
+  
+    stage("build number"){
+    steps{
+      echo "${env.BUILD_NUMBER}"
+    }
+  }
 
 }
 }
