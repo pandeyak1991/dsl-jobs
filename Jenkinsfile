@@ -21,7 +21,7 @@ stages{
     }
   }
   
-  stages("parellel"){
+  
     parallel{
       stage("git clone repo 1")
       steps{
@@ -31,7 +31,7 @@ stages{
         steps{
         echo "cloning repo 2"
         }}
-    }
+    
   }
 
 }
