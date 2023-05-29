@@ -21,6 +21,7 @@ stages{
     }
   }
   
+ // FOLLOWING STEPS WILL EXECUTE PARALLEL ===== 
   stage("parallel"){
     parallel{
       stage("git clone repo 1"){
@@ -33,6 +34,6 @@ stages{
         }}
     }
   }
-
+// ===============
 }
 }
