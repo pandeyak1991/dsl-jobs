@@ -35,7 +35,7 @@ pipeline {
     stage("CleanUP Before deploy"){
       steps{
 //         uncomment docker command to make build failure
-//         docker ps -a
+        docker ps -a
         echo "Clean up"
       }
     }  
