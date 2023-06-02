@@ -21,6 +21,12 @@ pipeline {
 //   }  
   
     stage("build number"){
+//      Will skip this step if when condition will fail
+      when {
+        expression {
+                    return env.GIT_BRANCH == "origin/test"
+                   }
+       }
     steps{
       echo "${env.BUILD_NUMBER}"
     }
