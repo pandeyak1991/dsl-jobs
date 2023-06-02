@@ -34,7 +34,8 @@ pipeline {
     
     stage("CleanUP Before deploy"){
       steps{
-        docker ps -a
+//         uncomment docker command to make build failure
+//         docker ps -a
         echo "Clean up"
       }
     }  
@@ -82,5 +83,9 @@ pipeline {
     failure{
      sh "echo Executing because job is failed"
     }
-  } 
+  }
+//   this will trigger when job is successfully executed
+  success{
+    sh "curl localhost:8080"
+  }
 }
