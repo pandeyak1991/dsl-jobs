@@ -38,8 +38,13 @@ pipeline {
       }
     }  
     stage("Build-deploy"){
+//       Will ask manual approval for deployement else job will be on hold
+      input
+          {
+          message "Do you want to proceed for deployment ?"   
+          }
       steps{
-      echo "Deploying build"
+        echo "Deploying build"
       }
     }
     
