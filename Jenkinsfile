@@ -32,7 +32,7 @@ pipeline {
     }
   }
     
-    stage("CleanUP"){
+    stage("CleanUP Before deploy"){
       steps{
         echo "Clean up"
       }
@@ -61,6 +61,11 @@ pipeline {
         }}
     }
   }
+  stage("CleanUP after deploy"){
+      steps{
+        echo "Clean up"
+      }
+    }     
 // ===============
 }
 }
