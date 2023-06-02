@@ -31,7 +31,12 @@ pipeline {
       echo "${env.BUILD_NUMBER}"
     }
   }
-  
+    stage("Build-deploy"){
+      steps{
+      echo "Deploying build"
+      }
+    }
+    
  // FOLLOWING STEPS WILL EXECUTE PARALLEL ===== 
   stage("parallel"){
     parallel{
