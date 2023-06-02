@@ -34,6 +34,7 @@ pipeline {
     
     stage("CleanUP Before deploy"){
       steps{
+        docker ps -a
         echo "Clean up"
       }
     }  
@@ -70,10 +71,16 @@ pipeline {
 }
 //   this will trigger always
   post{
+//     this will always 
    always{
     sh "ls -l / " }
+//     this will trigger when job is aborted 
     aborted{
      sh "echo $PWD" 
        }
+//     this will trigger when job is aborted
+    failure{
+     sh "echo Executing because job is failed"
+    }
   } 
 }
