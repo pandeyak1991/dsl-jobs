@@ -68,7 +68,7 @@ pipeline {
     }     
 // ===============
 }
-  this will trigger always
+//   this will trigger always
   post{
     always{
    sh "ls -l / " }
