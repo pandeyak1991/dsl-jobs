@@ -73,4 +73,7 @@ pipeline {
     always{
    sh "ls -l / " }
   } 
+  aborted{
+  sh "echo $PWD"
+  }
 }
