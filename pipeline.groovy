@@ -6,6 +6,4 @@ agent any
      echo "Hello world"
     }
   }       
-}
-
-
+  }}
