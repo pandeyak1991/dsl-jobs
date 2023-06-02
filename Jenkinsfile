@@ -70,10 +70,10 @@ pipeline {
 }
 //   this will trigger always
   post{
-    always{
-   sh "ls -l / " }
+   always{
+    sh "ls -l / " }
+    aborted{
+      echo $PWD 
+       }
   } 
-  aborted{
-  echo $PWD
-  }
 }
