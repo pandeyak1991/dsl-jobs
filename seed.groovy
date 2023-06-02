@@ -1,5 +1,5 @@
 job("auto-pilot-job"){
-  disabled() //will disable job
+//   disabled() //will disable job
   description('Welcome to my Sample DSL Job')
   parameters{
   stringParam('tool',defaultValue="docker",description="name of tool")
