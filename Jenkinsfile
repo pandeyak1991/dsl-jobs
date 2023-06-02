@@ -88,4 +88,7 @@ pipeline {
     sh "curl localhost:8080"
   }
   }
+  cleanup{
+    sh "echo cleaning everything after stage and post job"
+  }
 }
