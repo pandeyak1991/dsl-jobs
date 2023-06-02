@@ -90,4 +90,4 @@ pipeline {
   cleanup{
     sh "echo cleaning everything after stage and post job"
   }
-}
+  }}
