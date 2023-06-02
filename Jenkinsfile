@@ -24,7 +24,7 @@ pipeline {
 //      Will skip this step if when condition will fail
       when {
         expression {
-                    return env.GIT_BRANCH == "origin/main"
+                    return env.GIT_BRANCH == "origin/test"
                    }
        }
     steps{
