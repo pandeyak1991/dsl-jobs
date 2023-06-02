@@ -1,8 +1,12 @@
 pipeline {
   agent any
 
-  options{timestamps()}   // will add timestemps for each stage and steps 
-stages{
+  options{timestamps()
+  buildDiscarder(logRotator(numToKeepStr: "3"))       // will remove old logs and last 3 logs will remain
+         
+         }   // will add timestemps for each stage and steps 
+
+  stages{
   stage("echo"){
     steps{
      echo "Hello world"
