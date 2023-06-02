@@ -83,9 +83,9 @@ pipeline {
     failure{
      sh "echo Executing because job is failed"
     }
-  }
-//   this will trigger when job is successfully executed
+    //   this will trigger when job is successfully executed
   success{
     sh "curl localhost:8080"
+  }
   }
 }
