@@ -31,6 +31,12 @@ pipeline {
       echo "${env.BUILD_NUMBER}"
     }
   }
+    
+    stage("CleanUP"){
+      steps{
+        echo "Clean up"
+      }
+    }  
     stage("Build-deploy"){
       steps{
       echo "Deploying build"
